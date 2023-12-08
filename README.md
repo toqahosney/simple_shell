@@ -7,7 +7,7 @@ This is a basic implementation of a shell in C programming language. The shell a
 ## compilation and usage
 
 ```
-$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o -o shell
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o shell
 ```
 
 interactive mode: `$ ./shell`
