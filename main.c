@@ -17,7 +17,7 @@ int main(void)
 	while (1)
 	{
 
-		print_function("$ ");
+		print_function("#cisfun$ ");
 		read_line = getline(&line, &len, stdin);
 
 		if (read_line == -1)
