@@ -23,7 +23,7 @@ int main(void)
 
 		if (read_line == -1)
 			break;
-		else if (line[0] == '\n')
+		else if (line[0] == '\n' || is_whitespace(line))
 			continue;
 		else
 		{
