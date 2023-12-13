@@ -25,7 +25,10 @@ char **tokenizing(char *str)
 		exit(EXIT_FAILURE);
 	}
 
-	token = strtok(str, " \n");
+	while (isspace(*str))
+		str++;
+
+	token = strtok(str, " \t\n");
 	while (token != NULL && arg_count < MAX_ARGS)
 	{
 		arguments[arg_count] = strdup(token);
@@ -38,7 +41,7 @@ char **tokenizing(char *str)
 			exit(EXIT_FAILURE);
 		}
 		arg_count++;
-		token = strtok(NULL, "\n");
+		token = strtok(NULL, " \t\n");
 	}
 	arguments[arg_count] = NULL;
 
