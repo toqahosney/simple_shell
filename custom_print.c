@@ -1,13 +1,26 @@
 #include "shell.h"
+/**
+ * _puts - implementation of puts to print a string without a newline.
+ * @str: an input string
+ * Return: Nothing
+ */
+void _puts(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+	}
+}
 
 /**
- * print_function - this function is a small replacement for printf
- * @str: a pointer to the string that is needed to be printed
- * Return: oid
+ * _putchar - prints a characyer to stdout.
+ * @chr: The character to be printed on screen.
+ * Return:  int.
  */
-void print_function(char *str)
+int _putchar(char chr)
 {
-	int len = strlen(str);
-
-	write(STDOUT_FILENO, str, len);
+	return (write(1, &chr, 1));
 }
