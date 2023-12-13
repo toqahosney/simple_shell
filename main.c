@@ -17,7 +17,8 @@ int main(void)
 	while (1)
 	{
 
-		print_function("($) ");
+		if (isatty(fileno(stdin)))
+			_puts("$ ");
 		read_line = getline(&line, &len, stdin);
 
 		if (read_line == -1)

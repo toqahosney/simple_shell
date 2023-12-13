@@ -12,9 +12,10 @@
 #define MAX_ARGS 50
 #define MAX_CHARS 100
 
-void print_function(char *str);
 char **tokenizing(char *str);
 void free_array(char **arguments);
 void execute_command(char **args);
+int _putchar(char chr);
+void _puts(char *str);
 
 #endif
