@@ -10,7 +10,7 @@ int main(void)
 {
 	char *line = NULL;
 	char **tokens;
-	int exit_status;
+	int exit_status = 0;
 	size_t len = 0;
 	ssize_t read_line;
 
